@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+	transition: all .1s ease-in;
+}
+body{
+
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-wrapper {
+	max-width: 794px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border: 1px solid black;
+}
+.ba-board:before,.ba-board:after {
+	content: "";
+	display: table;
+}
+.ba-board:after {
+	clear: both;
+}
+.chess div{
+	float: left;
+	width: 99px;
+	height: 99px;
+	border: 1px solid black;
+}
+.chess:nth-child(odd) div:nth-child(odd), .chess:nth-child(even) div:nth-child(even) {
+	background: #A9A9A9;;
+}
+.chess:nth-child(1) div:nth-child(odd):after, .chess:nth-child(2) div:nth-child(even):after, .chess:nth-child(3) div:nth-child(odd):after {
+	content: "";
+	border-radius: 50%;
+	box-shadow:  5px 7px rgba(139,0,0,1);
+	width: 90%;
+	height: 90%;
+	background-color: #B22222;
+	margin-left: 2%;
+	margin-top: 2%;
+	float: left;
+}
+.chess:nth-child(6) div:nth-child(even):after, .chess:nth-child(7) div:nth-child(odd):after, .chess:nth-child(8) div:nth-child(even):after {
+	content: "";
+	border-radius: 50%;
+	box-shadow:  5px 7px rgba(139,71,38,1);
+	width: 90%;
+	height: 90%;
+	background-color: #996633;
+	margin-left: 2%;
+	margin-top: 2%;
+	float: left;
+}
+.chess div:hover:after {
+	transform: translateY(-15%);
+}
